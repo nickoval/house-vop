@@ -1,6 +1,152 @@
+:root {
+  --main-text-color: #ffffff;
+  --acent-color: #D4C17F;
+  --background-color-primary: #242B33;
+
+  --main-font: 'Raleway', sans-serif;
+  --features-font:'Roboto', sans-serif;
+  --title-font: 'Playfair Display', serif;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color:var(--background-color-primary);
+}
+
+::selection {
+  color: var(--main-text-color);
+  background-color: var(--acent-color);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section-title {
+  font-family: var(--title-font);
+  font-size: 36px;
+  line-height: 1.333;
+
+  color: var(--acent-color);
+}
+
+/* Submenu */
+.submenu {
+  display: none;
+}
+
+.header-menu-item:focus-within .submenu {
+  display: block;
+}
 
 
-
+/* Header */
 .page-header {
-  background-color: lightgray;
+  /* background-color: gray; */
+}
+
+.link {
+  font-style: 14px;
+  line-height: 1.143;
+}
+.link:hover {
+  color: var(--acent-color);
+  text-decoration: underline;
+}
+
+
+/* Hero */
+.hero-title {
+  font-size: 48px;
+  text-align: center;
+}
+
+.hero-contacts {
+  font-style: normal;
+  font-style: 18px;
+  line-height: 1.667;
+
+}
+
+
+/* Features */
+.features-list {
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+/* Flats */
+.flat-list {
+  font-size: 24px;
+  line-height: 1.167;
+}
+
+
+/* Price */
+.price-table {
+  font-style: 24px;
+  line-height: 1.167;
+}
+
+/* Price */
+.price-table-head {
+  font-weight: 700;
+}
+
+/* Contact-section */
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.688;
+  text-align: center;
+  padding: 12px 40px;
+  background-color: var(--acent-color);
+}
+
+/* Callback-section */
+.callback-section-text {
+  font-style: 13px;
+  line-height: 1.23;
+}
+
+
+
+
+/* Footer */
+.footer-contacts {
+  font-size: normal;
 }

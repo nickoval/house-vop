@@ -5,43 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HouseVOP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="page-header">
       <div class="container">
         <a href="" class="logo">
-          <svg class="icon" width="165" height="69">
+          <img src="./img/first-screen__logo.svg" alt="" />
+          <!-- <svg class="icon" width="165" height="69">
             <use href="./img/first-screen__logo.svg"></use>
-          </svg>
+          </svg> -->
         </a>
         <nav>
-          <ul class="nav-list">
-            <li nav-list-item><a href="">Про комплекс</a></li>
-            <li nav-list-item><a href="">Район</a></li>
-            <li nav-list-item>
-              <a href="">Каталог квартир</a>
-              <ul class="catalog-list">
-                <li class="catalog-list-item"><a href="">Стандарт</a></li>
-                <li class="catalog-list-item"><a href="">Комфорт</a></li>
-                <li class="catalog-list-item"><a href="">Люкс</a></li>
-                <li class="catalog-list-item"><a href="">Супер Люкс</a></li>
+          <ul class="header-menu">
+            <li class="header-menu-item">
+              <a class="link" href="">Про комплекс</a>
+            </li>
+            <li class="header-menu-item"><a class="link" href="">Район</a></li>
+            <li class="header-menu-item">
+              <a class="link" href="">Каталог квартир</a>
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a class="link" href="">Стандарт</a>
+                </li>
+                <li class="submenu-item">
+                  <a class="link" href="">Комфорт</a>
+                </li>
+                <li class="submenu-item"><a class="link" href="">Люкс</a></li>
+                <li class="submenu-item">
+                  <a class="link" href="">Супер Люкс</a>
+                </li>
               </ul>
             </li>
-            <li nav-list-item><a href="">Іпотека</a></li>
-            <li nav-list-item><a href="">Контакти</a></li>
+            <li class="header-menu-item">
+              <a class="link" href="">Іпотека</a>
+            </li>
+            <li class="header-menu-item">
+              <a class="link" href="">Контакти</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
       <section class="hero">
-        <h1>
+        <h1 class="section-title hero-title">
           Житловий комплекс в <br />
           історичному центрі
         </h1>
         <a href=""><img src="./img/mouse.svg" alt="" /></a>
-        <address>
+        <address class="hero-contacts">
           <ul>
             <li><a href="">вул. Садова 10-15</a></li>
             <li><a href="tel:+380991234567"></a>+38 (099) 123-45-67</li>
@@ -49,7 +68,7 @@
         </address>
       </section>
       <section class="features">
-        <p2 class="section-title">Наші Перевагии</p2>
+        <h2 class="section-title">Наші Переваги</h2>
         <ul class="features-list">
           <li class="features-lisy-item">
             <p class="text">Поряд історичні парки та сквери</p>
@@ -82,11 +101,11 @@
       </section>
       <section class="price">
         <h2 class="section-title">Наші ціни</h2>
-        <table>
-          <caption>
+        <table class="price-table">
+          <caption class="price-caption">
             Каталог типів квартир за ціною
           </caption>
-          <thead>
+          <thead class="price-table-head">
             <tr>
               <th>Квартира</th>
               <th>Поверховість</th>
@@ -125,36 +144,80 @@
         </table>
       </section>
       <section class="contact-section">
-        <h2 class="section-title">Хочете подивитися?</h2>    
-        <p class="text">Житловий комплекс в історичному центрі міста HouseVOP завершив будівництво та здав об’єкт в експлаутацію <time datetime="2021-03-11">11 березня 2021 року</time>. Якщо ви маєте бажання подивитися квартиру, чекаємо на Вас. Тут просто повинен бути будь-який текст, для того щоб збільшити його об’єм, тому що фанатазії придумати щось нове - вже немає. Якщо у когось є ідея - завжди велкам!</p>    
-
+        <h2 class="section-title">Хочете подивитися?</h2>
+        <p class="text">
+          Житловий комплекс в історичному центрі міста HouseVOP завершив
+          будівництво та здав об’єкт в експлаутацію
+          <time datetime="2021-03-11">11 березня 2021 року</time>. Якщо ви маєте
+          бажання подивитися квартиру, чекаємо на Вас. Тут просто повинен бути
+          будь-який текст, для того щоб збільшити його об’єм, тому що фанатазії
+          придумати щось нове - вже немає. Якщо у когось є ідея - завжди велкам!
+        </p>
+        <button class="button">Подивитись район</button>
       </section>
+
       <section class="video-section">
         <!-- <video src="" width: 719px;
         height: 650px;></video> -->
         <video controls loop muted>
-          <source src="./assets/videos/test_video.webm" type="video/webm">
-          <source src="./assets/videos/test_video.mp4" type="video/mp4">
+          <source src="./assets/videos/test_video.webm" type="video/webm" />
+          <source src="./assets/videos/test_video.mp4" type="video/mp4" />
           Нажаль, це відео не підтримується вашим браузером :(
-      </video>
-
+        </video>
       </section>
-
-
 
       <section class="map-section">
-        <h2 class="section-title">Район на мапі</h2>   
+        <h2 class="section-title">Район на мапі</h2>
         <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.6153130853136!2d-47.89467269821356!3d-15.793063318888567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2fe53c69c215%3A0xd7704b3f4eccf40d!2sMeli%C3%A1%20Brasil%2021!5e0!3m2!1suk!2sde!4v1654711082400!5m2!1suk!2sde"
-        width="100%" 
-        height="360"
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-        </iframe> 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.6153130853136!2d-47.89467269821356!3d-15.793063318888567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2fe53c69c215%3A0xd7704b3f4eccf40d!2sMeli%C3%A1%20Brasil%2021!5e0!3m2!1suk!2sde!4v1654711082400!5m2!1suk!2sde"
+          width="100%"
+          height="360"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
       </section>
-
-
+      <section class="callback-section">
+        <h2 class="section-title">Залишились питання?</h2>
+        <p>
+          *Ми нікому не передаємо ваші дані і не зберігаємо ваш номер у базу.
+        </p>
+        <button class="button">Подивитись район</button>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <a href="" class="logo">
+        <img src="./img/first-screen__logo.svg" alt="" />
+      </a>
+      <p>© 2022 Всі права захищені. HouseVOP</p>
+      <address>
+        <ul class="footer-menu">
+          <li class="footer-menu-item">
+            <a class="link" href="#">Про комплекс</a>
+          </li>
+          <li class="footer-menu-item">
+            <a class="link" href="#">Район</a>
+          </li>
+          <li class="footer-menu-item">
+            <a class="link" href="#">Каталог квартир</a>
+          </li>
+          <li class="footer-menu-item">
+            <a class="link" href="#">Іпотека</a>
+          </li>
+          <li class="footer-menu-item">
+            <a class="link" href="#">Контакти</a>
+          </li>
+        </ul>
+        <ul>
+          <li>Адреса: <a href="#">вул. Садова 10-15</a></li>
+          <li>Телефон: <a href="tel:+380991234567">+38 (099) 123-45-67</a></li>
+          <li>
+            Відділ продажу: <time datetime="10:00">10:00</time> -
+            <time datetime="20:00">20:00</time>
+          </li>
+          <li>E-mail: <a href="mailto:vip@housevip.ru">vip@housevip.ru</a></li>
+        </ul>
+      </address>
+    </footer>
   </body>
 </html>
