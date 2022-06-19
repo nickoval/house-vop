@@ -2,6 +2,7 @@
   --main-text-color: #ffffff;
   --acent-color: #D4C17F;
   --background-color-primary: #242B33;
+  --table-bg-color: rgba(255, 255, 255, 0.1);
 
   --main-font: 'Raleway', sans-serif;
   --features-font:'Roboto', sans-serif;
@@ -74,6 +75,21 @@ img {
 }
 
 
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Header */
 .page-header {
   /* background-color: gray; */
@@ -99,7 +115,6 @@ img {
   font-style: normal;
   font-style: 18px;
   line-height: 1.667;
-
 }
 
 
@@ -120,11 +135,13 @@ img {
 .price-table {
   font-style: 24px;
   line-height: 1.167;
+  text-align: center;
 }
 
 /* Price */
 .price-table-head {
   font-weight: 700;
+  background-color: var(--table-bg-color);
 }
 
 /* Contact-section */
@@ -133,9 +150,18 @@ img {
   font-size: 16px;
   line-height: 1.688;
   text-align: center;
-  padding: 12px 40px;
+  padding: 11px 40px;
+  color: var(--main-text-color);
   background-color: var(--acent-color);
+  border: 1px solid transparent;
 }
+
+.button:hover, .button:focus {
+  color: var(--acent-color);
+  background-color: var(--main-text-color);
+  border: 1px solid var(--acent-color);
+}
+
 
 /* Callback-section */
 .callback-section-text {
@@ -147,6 +173,16 @@ img {
 
 
 /* Footer */
+.copyright-text {
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.05em;
+}
+
+
 .footer-contacts {
-  font-size: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.05em;
 }
