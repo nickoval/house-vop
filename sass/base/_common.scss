@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: var(--background-color-primary);
+}
+
+::selection {
+  color: var(--main-text-color);
+  background-color: var(--acent-color);
+}
+
+main {
+  margin-top: 117px;
+}

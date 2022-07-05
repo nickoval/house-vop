@@ -1,0 +1,12 @@
+.link {
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.05em;
+
+  &:hover {
+    color: var(--acent-color);
+    text-decoration: underline;
+  }
+
+}
+
