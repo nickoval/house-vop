@@ -1,6 +1,10 @@
 .footer {
   padding: 48px 0;
   background-color: var(--footer-bg-color);
+
+  &__link {
+    padding: 0;
+  }
 }
 
 
@@ -13,7 +17,8 @@
 .footer-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
+  gap: 4rem;
 }
 
 
