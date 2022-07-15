@@ -148,8 +148,19 @@
           <h2 class="section-title">Наші квартири</h2>
           <ul class="flat-list">
             <li class="flat-list__item">
-              <img src="./img/standart.jpg" alt="Стандарт" />
-              <p class="flat-list__text">Стандарт - 1 поверх</p>
+              <div class="flat-list__wrap">
+                <img src="./img/standart.jpg" alt="Стандарт" />
+                <p class="flat-list__text">Стандарт - 1 поверх</p>
+              </div>
+              <div class="flat-overlay">
+                <p class="flat-overlay__text">
+                  Номери категорії Стандарт ідеально підходять для одномісного
+                  розміщення. Класичний інтер'єр, меблі з натурального дерева.
+                  Середня площа номера від 17м² до 19,5м² з одним великим ліжком
+                  (180x200см). Вікна номерів виходять у двір і місто.
+                  Максимальне розміщення гостей в номері - 3.
+                </p>
+              </div>
             </li>
             <li class="flat-list__item">
               <img src="./img/comfort.jpg" alt="Комфорт" />
@@ -231,7 +242,7 @@
               <input type="text" class="cta-section__input" />
               <input type="text" class="cta-section__input" />
               <input type="text" class="cta-section__input" />
-              <button class="button">Подивитись район</button>
+              <button class="button" data-modal-open>Подивитись район</button>
             </form>
           </div>
         </div>
@@ -276,7 +287,7 @@
               *Ми нікому не передаємо ваші дані <br />
               і не зберігаємо ваш номер у базу.
             </p>
-            <button class="button">Подивитись район</button>
+            <button class="button" data-modal-open>Подивитись район</button>
           </div>
         </div>
       </section>
@@ -413,5 +424,19 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop" data-modal visually-hidden>
+      <div class="modal">
+        <button class="modal-close-button" type="button" data-modal-close>
+          X
+        </button>
+        <h2 class="section-title modal__title">Хочете подивитися?</h2>
+        <h3>Контактна інформація</h3>
+        <div>
+          <label for="">Введіть ім’я <span>*</span></label>
+          <input type="text" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>

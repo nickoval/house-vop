@@ -29,6 +29,12 @@
   /* margin-left: auto;
   margin-right: auto; */
   margin-bottom: 200px;
+
+  animation: scrollIconMouse 4s linear 250ms infinite alternate;
+    
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 
 .scroll-icon {
