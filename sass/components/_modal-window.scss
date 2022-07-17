@@ -8,6 +8,20 @@
   // height: 100%;
   z-index: 100;
   background-color: var(--backdrop-color);
+
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateX(0);
+
+  transition:  transform 500ms, opacity 500ms, visibility 500ms;
+
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0) translateX(100%);
+  }
 }
 
 .modal {
@@ -17,16 +31,24 @@
   transform: translate(-50%, -50%);
   width: 33.5rem;
   min-height: 20rem;
+  max-height: 40rem;
+  overflow: auto;
 
+    background-color: var(--background-color-primary);
   box-shadow: 0px 0px 6px 6px rgba(255, 255, 255, 0.25);
   border-radius: 4px;
 
   &__title {
     text-align: center;
-    margin-top: 52px;
+    // margin-top: 52px;
     margin-bottom: 32px;
   }
 }
+
+.modal-inner {
+  padding: 48px 40px;
+}
+
 
 .modal-close-button {
   position: absolute;
@@ -39,10 +61,12 @@
   width: 24px;
   height: 24px;
 
-
-
   color: var(--main-text-color);
   background-color: transparent;
   border: 0;
+  cursor: pointer;
 
+  &:hover, &:focus {
+    color:aqua
+  }
 }

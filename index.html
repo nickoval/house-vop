@@ -11,8 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   </head>
   <body>
     <header class="page-header">
@@ -242,7 +246,9 @@
               <input type="text" class="cta-section__input" />
               <input type="text" class="cta-section__input" />
               <input type="text" class="cta-section__input" />
-              <button class="button" data-modal-open>Подивитись район</button>
+              <button type="button" class="button" data-modal-open>
+                Подивитись район
+              </button>
             </form>
           </div>
         </div>
@@ -287,7 +293,9 @@
               *Ми нікому не передаємо ваші дані <br />
               і не зберігаємо ваш номер у базу.
             </p>
-            <button class="button" data-modal-open>Подивитись район</button>
+            <button type="button" class="button" data-modal-open disabled>
+              Подивитись район
+            </button>
           </div>
         </div>
       </section>
@@ -425,18 +433,178 @@
       </div>
     </footer>
 
-    <div class="backdrop" data-modal visually-hidden>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-button" type="button" data-modal-close>
           X
         </button>
-        <h2 class="section-title modal__title">Хочете подивитися?</h2>
-        <h3>Контактна інформація</h3>
-        <div>
-          <label for="">Введіть ім’я <span>*</span></label>
-          <input type="text" />
+        <div class="modal-inner">
+          <h2 class="section-title modal__title">Хочете подивитися?</h2>
+          <form class="form" name="main-form" autocomplete="on">
+            <fieldset>
+              <legend class="form__title">Контактна інформація</legend>
+              <div class="form__field">
+                <label for="user-name" class="form__label"
+                  >Введіть ім’я
+                  <span class="form__label-asterisk">*</span></label
+                >
+                <input
+                  type="text"
+                  id="user-name"
+                  class="form__input"
+                  name="user-name"
+                  placeholder="Іван Іванович"
+                  pattern="^[Є-ЯҐа-їґ]+\s[Є-ЯҐа-їґ]+$"
+                  title="Поле повинно містити ім'я та призвище"
+                  maxlength="100"
+                  required
+                />
+                <!-- pattern="^[А-Яа-яёЁЇїІіЄєҐґ]+\s[А-Яа-яёЁЇїІіЄєҐґ]+$" -->
+              </div>
+              <div class="form__field">
+                <label for="name" class="form__label"
+                  >Введіть e-mail
+                  <span class="form__label-asterisk">*</span></label
+                >
+                <input
+                  type="email"
+                  id="user-mail"
+                  class="form__input"
+                  name="user-email"
+                  placeholder="example@mail.com"
+                  required
+                />
+              </div>
+              <div class="form__field">
+                <label for="user-phone" class="form__label"
+                  >Введіть телефон
+                </label>
+                <input
+                  type="tel"
+                  id="user-phone"
+                  class="form__input"
+                  name="user-phone"
+                  placeholder="099 122 22 21"
+                />
+              </div>
+              <div class="form__field">
+                <label for="user-password" class="form__label"
+                  >Введіть пароль
+                </label>
+                <input
+                  type="password"
+                  id="user-password"
+                  class="form__input"
+                  name="user-password"
+                  placeholder="****"
+                  minlength="4"
+                  maxlength="20"
+                />
+              </div>
+            </fieldset>
+            <div role="group" aria-labelledby="contact-info">
+              <p class="form__title" id="contact-info">
+                Інформація про квартиру
+              </p>
+              <!-- <fieldset class="form__fieldset">
+              <legend class="form__title">Інформація про квартиру</legend> -->
+              <div class="form__field">
+                <label for="flat-type" class="form__label"
+                  >Оберіть тип квартири <span>*</span></label
+                >
+                <select id="flat-type" name="flat-type" class="form__input">
+                  <option value="1">Стандарт - 1 поверх</option>
+                  <option value="2">Комфорт - 2 поверхи</option>
+                  <option value="3" selected>Люкс - 3 поверхи</option>
+                  <option value="4">Супер Люкс - 4 поверхи</option>
+                </select>
+              </div>
+              <div class="form__field">
+                <label for="flat-location" class="form__label"
+                  >Наскільки вам зручне містознаходження?</label
+                >
+                <input
+                  type="range"
+                  id="flat-location"
+                  class="form__input-range"
+                  name="flat-location"
+                  min="1"
+                  max="10"
+                  value="7"
+                  step="3"
+                />
+              </div>
+              <div class="form__field">
+                <label for="user-term" class="form__label"
+                  >На який термін плануєте купувати житло? (від 1 до 100
+                  років)</label
+                >
+                <input
+                  type="number"
+                  id="user-term"
+                  class="form__input"
+                  name="user-term"
+                  value="10"
+                  min="1"
+                  max="50"
+                />
+              </div>
+              <div class="form__field">
+                <label for="date-time" class="form__label"
+                  >Оберіть дату і час перегляду квартири <span>*</span></label
+                >
+                <input
+                  type="datetime-local"
+                  id="dite-time"
+                  class="form__input"
+                  name="dite-time"
+                  placeholder="02/11/2022  10:00"
+                />
+              </div>
+              <!-- </fieldset> -->
+            </div>
+
+            <fieldset>
+              <legend class="form__title">Додаткова інформація</legend>
+              <div class="form__field">
+                <label for="user-comment" class="form__label"
+                  >Введіть коментар
+                </label>
+                <textarea
+                  name=""
+                  id="user-comment"
+                  class="form__input form__textarea"
+                  placeholder="Моє побажання..."
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <div class="form__field">
+              <input
+                type="checkbox"
+                name="terms-conditions"
+                id="terms-conditions"
+              />
+              <label for="terms-conditions" class="form__conditions-label"
+                >Я згоден з правами використання введених особистих даних.
+              </label>
+            </div>
+            <div class="form__field">
+              <button type="submit" class="button form-button">
+                Подивитись район
+              </button>
+            </div>
+            <p class="form__comment">
+              <i
+                >Ми нікому не передаємо ваші дані. І не зберігаємо ваш номер у
+                базу.</i
+              >
+            </p>
+          </form>
         </div>
       </div>
     </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

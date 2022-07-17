@@ -15,4 +15,11 @@
     background-color: var(--main-text-color);
     border: 1px solid var(--acent-color);
   }
+
+  &:disabled {
+    color: #5C5C5C;
+    background-color: #A3A3A3;
+    box-shadow: 0px 0px 2px 4px rgba(163, 163, 163, 0.3);
+    cursor: not-allowed;
+  }
 }
