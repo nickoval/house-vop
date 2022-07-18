@@ -459,6 +459,9 @@
                   maxlength="100"
                   required
                 />
+                <p class="form__error-message">
+                  Не вірне значення
+                </p>
                 <!-- pattern="^[А-Яа-яёЁЇїІіЄєҐґ]+\s[А-Яа-яёЁЇїІіЄєҐґ]+$" -->
               </div>
               <div class="form__field">
@@ -474,6 +477,9 @@
                   placeholder="example@mail.com"
                   required
                 />
+                <p class="form__error-message">
+                  Не вірне значення
+                </p>
               </div>
               <div class="form__field">
                 <label for="user-phone" class="form__label"
@@ -548,6 +554,9 @@
                   min="1"
                   max="50"
                 />
+                <p class="form__error-message">
+                  Не вірне значення
+                </p>
               </div>
               <div class="form__field">
                 <label for="date-time" class="form__label"
@@ -579,16 +588,28 @@
               </div>
             </fieldset>
 
-            <div class="form__field">
-              <input
-                type="checkbox"
-                name="terms-conditions"
-                id="terms-conditions"
+            <!-- <div class="form__field checkbox">
+              <div class="checkbox-control">
+                <input type="checkbox"
+                name="terms-conditions" id="terms-conditions" class="checkbox-input visually-hidden"
               />
-              <label for="terms-conditions" class="form__conditions-label"
+              <svg class="checkbox__icon" aria-hidden="true">
+                <use href="./img/icons.svg#icon-instagram"></use>
+              </svg>
+              </div>
+              <label for="terms-conditions" class="checkbox-label"
                 >Я згоден з правами використання введених особистих даних.
               </label>
-            </div>
+            </div> -->
+
+            <div class="form__field checkbox">
+              <input type="checkbox"
+                name="terms-conditions" id="terms-conditions" class="checkbox-input visually-hidden" />
+              <label for="terms-conditions" class="checkbox-label"
+                >Я згоден з правами використання введених особистих даних.
+              </label>
+            </div>            
+
             <div class="form__field">
               <button type="submit" class="button form-button">
                 Подивитись район

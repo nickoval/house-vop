@@ -31,15 +31,25 @@
     color: var(--form-label-color);
     background-color: var(--input-bg-color);
     padding: 12px 16px;
-    border: 0;
+    border: 1px solit transparent;
 
     &:focus {
-      outline-color: var(--acent-color);
+      border-color: var(--acent-color);
     }
 
-    &:required {
-      border: 1px dotted var(--color-warning);
+    &:valid, &:in-range {
+      border-color: green;
     }
+
+    &:not(:placeholder-shown):invalid, 
+    &:not(:placeholder-shown):out-of-range {
+      border-color: var(--color-warning);
+    }
+
+
+    // &:required {
+    //   border: 1px dotted var(--color-warning);
+    // }
 
     &::placeholder {
       // font-family: var(main-font);
@@ -47,6 +57,20 @@
     }
 
   }
+
+
+  &__error-message {
+    display: none;
+    font-size: 12px;
+    margin-top: 8px;
+    color: var(--color-warning);
+  }
+
+  &__input:not(:placeholder-shown):invalid + &__error-message, 
+  &__input:not(:placeholder-shown):out-of-range + &__error-message {
+    display: block;
+  }
+
 
   &__textarea {
     height: 140px;
@@ -57,7 +81,8 @@
     width: 100%;
   }
 
-&__conditions-label, &__comment {
+// &__conditions-label, 
+&__comment {
   font-size: 13px;
   line-height: 1.23;
   color: var(--form-label-color);
@@ -73,4 +98,93 @@
 
 .form-button {
   width: 100%;
+}
+
+
+// Checkbox (работает только при нажатии на label)
+// .checkbox {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .checkbox-input {
+//   appearance: none;
+// }
+
+// .checkbox-input:checked + .checkbox__icon {
+//   opacity: 1;
+// }
+
+// .checkbox-control {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 1.25rem;
+//   flex-shrink: 0;
+//   height: 1.25rem;
+//   background-color: #fff;
+//   border-radius: 2px;
+//   margin-right: 0.5rem;
+// }
+
+// .checkbox__icon {
+//   opacity: 0;
+//   width: 1rem;
+//   height: 1rem;
+//   fill: blue
+// }
+
+// .checkbox-label {
+//   font-size: 13px;
+//   line-height: 1.23;
+//   color: var(--form-label-color);
+// }
+
+// Checkbox (без подключения иконки)
+
+.checkbox-input {
+  appearance: none;
+}
+
+.checkbox-label {
+  position: relative;
+  font-size: 13px;
+  line-height: 1.23;
+  color: var(--form-label-color);
+  padding-left: 2rem;
+}
+
+.checkbox-label::after, .checkbox-label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.checkbox-label::before {
+  margin-top: -2px;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--input-bg-color);
+  border-radius: 2px;
+}
+
+.checkbox-input:focus-visible + .checkbox-label::before {
+  border: 1px solid var(--acent-color);
+}
+
+.checkbox-label::after {
+  margin-left: 7px;
+  margin-top: 1px;
+  width: 6px;
+  height: 12px;
+  background-color: transparent;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.checkbox-input:checked + .checkbox-label::after {
+  opacity: 1;
 }
