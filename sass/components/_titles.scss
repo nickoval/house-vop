@@ -1,8 +1,14 @@
-.section-title {
-  margin-bottom: 40px;
+.title {
   font-family: var(--title-font);
   font-size: 36px;
   line-height: 1.333;
 
   color: var(--acent-color);
+}
+
+
+
+.section__title {
+  margin-bottom: 40px;
+
 }

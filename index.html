@@ -70,12 +70,15 @@
     <main>
       <section class="section hero">
         <div class="container">
-          <h1 class="section-title hero__title">
+          <h1 class="section__title title hero__title">
             Житловий комплекс в історичному центрі
           </h1>
-          <a href="#benefits" class="scroll-link">
+          <a href="#benefits" class="hero__scroll-link">
             <!-- <img src="./img/mouse.svg" alt="scroll mouse" /> -->
-            <svg class="scroll-icon" aria-label="Перейти до наступної секції">
+            <svg
+              class="hero__scroll-icon"
+              aria-label="Перейти до наступної секції"
+            >
               <use href="./img/icons.svg#icon-mouse"></use>
             </svg>
           </a>
@@ -86,12 +89,6 @@
                   <svg class="hero-contacts__icon" aria-hidden="true">
                     <use href="./img/icons.svg#icon-placeholder"></use>
                   </svg>
-                  <!-- <img
-                    src="./img/icons/placeholder.svg"
-                    aria-hidden="true"
-                    alt=""
-                    width="21"
-                  /> -->
                   вул. Садова 10-15
                 </a>
               </li>
@@ -100,12 +97,6 @@
                   <svg class="hero-contacts__icon" aria-hidden="true">
                     <use href="./img/icons.svg#icon-phone-call"></use>
                   </svg>
-                  <!-- <img
-                    src="./img/icons/phone-call.svg"
-                    aria-hidden="true"
-                    alt=""
-                    width="21"
-                  /> -->
                   +38 (099) 123-45-67
                 </a>
               </li>
@@ -116,7 +107,7 @@
 
       <section class="section benefits" id="benefits">
         <div class="container">
-          <h2 class="section-title visually-hidden">Наші Переваги</h2>
+          <h2 class="title section__title visually-hidden">Наші Переваги</h2>
           <ul class="benefits-list">
             <li class="benefits-list__item">
               <svg class="benefits-list__icon" aria-hidden="true">
@@ -149,9 +140,70 @@
 
       <section class="section flats">
         <div class="container">
-          <h2 class="section-title">Наші квартири</h2>
+          <h2 class="title section__title flats__title">Наші квартири</h2>
           <ul class="flat-list">
-            <li class="flat-list__item">
+            <li class="flat-list__item-wrap">
+              <div class="flat-item">
+                <img src="./img/standart.jpg" alt="Стандарт" />
+                <p class="flat-item__text">Стандарт - 1 поверх</p>
+                <div class="flat-item__overlay">
+                  <p class="flat-item__overlay-text">
+                    Номери категорії Стандарт ідеально підходять для одномісного
+                    розміщення. Класичний інтер'єр, меблі з натурального дерева.
+                    Середня площа номера від 17м² до 19,5м² з одним великим
+                    ліжком (180x200см). Вікна номерів виходять у двір і місто.
+                    Максимальне розміщення гостей в номері - 3.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="flat-list__item-wrap">
+              <div class="flat-item">
+                <img src="./img/standart.jpg" alt="Комфорт" />
+                <p class="flat-item__text">Комфорт - 2 поверх</p>
+                <div class="flat-item__overlay">
+                  <p class="flat-item__overlay-text">
+                    Номери категорії Стандарт ідеально підходять для одномісного
+                    розміщення. Класичний інтер'єр, меблі з натурального дерева.
+                    Середня площа номера від 17м² до 19,5м² з одним великим
+                    ліжком (180x200см). Вікна номерів виходять у двір і місто.
+                    Максимальне розміщення гостей в номері - 3.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="flat-list__item-wrap">
+              <div class="flat-item">
+                <img src="./img/standart.jpg" alt="Люкс" />
+                <p class="flat-item__text">Люкс - 3 поверх</p>
+                <div class="flat-item__overlay">
+                  <p class="flat-item__overlay-text">
+                    Номери категорії Стандарт ідеально підходять для одномісного
+                    розміщення. Класичний інтер'єр, меблі з натурального дерева.
+                    Середня площа номера від 17м² до 19,5м² з одним великим
+                    ліжком (180x200см). Вікна номерів виходять у двір і місто.
+                    Максимальне розміщення гостей в номері - 3.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="flat-list__item-wrap">
+              <div class="flat-item">
+                <img src="./img/standart.jpg" alt="Супер Люкс" />
+                <p class="flat-item__text">Супер Люкс - 4 поверх</p>
+                <div class="flat-item__overlay">
+                  <p class="flat-item__overlay-text">
+                    Номери категорії Стандарт ідеально підходять для одномісного
+                    розміщення. Класичний інтер'єр, меблі з натурального дерева.
+                    Середня площа номера від 17м² до 19,5м² з одним великим
+                    ліжком (180x200см). Вікна номерів виходять у двір і місто.
+                    Максимальне розміщення гостей в номері - 3.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- <li class="flat-list__item">
               <div class="flat-list__wrap">
                 <img src="./img/standart.jpg" alt="Стандарт" />
                 <p class="flat-list__text">Стандарт - 1 поверх</p>
@@ -165,8 +217,8 @@
                   Максимальне розміщення гостей в номері - 3.
                 </p>
               </div>
-            </li>
-            <li class="flat-list__item">
+            </li>             -->
+            <!-- <li class="flat-list__item">
               <img src="./img/comfort.jpg" alt="Комфорт" />
               <p class="flat-list__text">Комфорт - 2 поверхи</p>
             </li>
@@ -177,14 +229,14 @@
             <li class="flat-list__item">
               <img src="./img/luxury.jpg" alt="Супер Люкс" />
               <p class="flat-list__text">Супер Люкс - 4 поверхи</p>
-            </li>
+            </li> -->
           </ul>
         </div>
       </section>
 
       <section class="section price">
         <div class="container">
-          <h2 class="section-title">Наші ціни</h2>
+          <h2 class="title section__title">Наші ціни</h2>
           <table class="price-table">
             <caption class="price-table__caption">
               Каталог типів квартир за ціною
@@ -231,7 +283,7 @@
 
       <section class="section cta-section">
         <div class="container">
-          <h2 class="section-title">Хочете подивитися?</h2>
+          <h2 class="title section__title">Хочете подивитися?</h2>
           <div class="cta-section-inner">
             <p class="cta-section__text">
               Житловий комплекс в історичному центрі міста HouseVOP завершив
@@ -256,7 +308,7 @@
 
       <section class="section video-section">
         <div class="container">
-          <h2 class="section-title visually-hidden">
+          <h2 class="title section__title visually-hidden">
             Відео огляд житлового комплексу
           </h2>
           <!-- <video src="" width: 719px;
@@ -273,7 +325,7 @@
 
       <section class="section map-section">
         <div class="container">
-          <h2 class="section-title">Район на мапі</h2>
+          <h2 class="title section__title">Район на мапі</h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.6153130853136!2d-47.89467269821356!3d-15.793063318888567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2fe53c69c215%3A0xd7704b3f4eccf40d!2sMeli%C3%A1%20Brasil%2021!5e0!3m2!1suk!2sde!4v1654711082400!5m2!1suk!2sde"
             width="100%"
@@ -287,7 +339,7 @@
 
       <section class="section callback-section">
         <div class="container">
-          <h2 class="section-title">Залишились питання?</h2>
+          <h2 class="title section__title">Залишились питання?</h2>
           <div class="callback-inner">
             <p class="callback-section__text">
               *Ми нікому не передаємо ваші дані <br />
@@ -439,7 +491,7 @@
           X
         </button>
         <div class="modal-inner">
-          <h2 class="section-title modal__title">Хочете подивитися?</h2>
+          <h2 class="title section__title modal__title">Хочете подивитися?</h2>
           <form class="form" name="main-form" autocomplete="on">
             <fieldset>
               <legend class="form__title">Контактна інформація</legend>
@@ -459,9 +511,7 @@
                   maxlength="100"
                   required
                 />
-                <p class="form__error-message">
-                  Не вірне значення
-                </p>
+                <p class="form__error-message">Не вірне значення</p>
                 <!-- pattern="^[А-Яа-яёЁЇїІіЄєҐґ]+\s[А-Яа-яёЁЇїІіЄєҐґ]+$" -->
               </div>
               <div class="form__field">
@@ -477,9 +527,7 @@
                   placeholder="example@mail.com"
                   required
                 />
-                <p class="form__error-message">
-                  Не вірне значення
-                </p>
+                <p class="form__error-message">Не вірне значення</p>
               </div>
               <div class="form__field">
                 <label for="user-phone" class="form__label"
@@ -554,9 +602,7 @@
                   min="1"
                   max="50"
                 />
-                <p class="form__error-message">
-                  Не вірне значення
-                </p>
+                <p class="form__error-message">Не вірне значення</p>
               </div>
               <div class="form__field">
                 <label for="date-time" class="form__label"
@@ -603,12 +649,16 @@
             </div> -->
 
             <div class="form__field checkbox">
-              <input type="checkbox"
-                name="terms-conditions" id="terms-conditions" class="checkbox-input visually-hidden" />
+              <input
+                type="checkbox"
+                name="terms-conditions"
+                id="terms-conditions"
+                class="checkbox-input visually-hidden"
+              />
               <label for="terms-conditions" class="checkbox-label"
                 >Я згоден з правами використання введених особистих даних.
               </label>
-            </div>            
+            </div>
 
             <div class="form__field">
               <button type="submit" class="button form-button">
