@@ -1,8 +1,10 @@
 .benefits-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   font-size: 20px;
   line-height: 1.35;
+  gap: 60px;
 
 
   &__item {
@@ -11,7 +13,7 @@
 
   &__item + &__item {
     width: 9rem;
-    margin-left: 60px;
+    // margin-left: 60px;
   }
 
   &__icon {

@@ -1,4 +1,4 @@
-.page-header {
+.header {
     position: fixed;
       top: 0;
       left: 0;
@@ -6,6 +6,34 @@
       z-index: 20;
       padding: 1rem 0;
       background-color: var(--background-color-header);
+
+  &__desktop-menu {
+    display: none;
+
+    @include for-tablet-up {
+      display: block;
+    }
+  }
+
+            &__desktop-menu {
+              display: none;
+      
+              @include for-tablet-up {
+                display: block;
+              }
+            }
+      
+            &__mobile-menu {
+              @include for-tablet-up {
+                display: none;
+              }
+            }
+      
+            &__open-menu {
+              @include for-tablet-up {
+                display: none;
+              }
+            }
       
 }
 

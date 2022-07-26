@@ -1,7 +1,11 @@
 .title {
   font-family: var(--title-font);
-  font-size: 36px;
   line-height: 1.333;
+  font-size: 24px;
+
+  @include for-phone-up {
+    font-size: 36px;  
+  }
 
   color: var(--acent-color);
 }
@@ -10,5 +14,4 @@
 
 .section__title {
   margin-bottom: 40px;
-
 }

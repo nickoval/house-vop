@@ -14,47 +14,71 @@
   /* background-attachment: fixed; */
 
   
-  .hero__title {
+  &__title {
     max-width: 556px;
-    font-size: 48px;
-    /* text-align: center; */
+    font-size: 28px;
     margin: 0 auto 100px;
-    /* margin-bottom: 100px; */
+
+    @include for-phone-up {
+      font-size: 36px;
+    }
+
+    @include for-tablet-up {
+      font-size: 48px;
+     }
+  }
+
+  &__scroll-link {
+    margin-bottom: 150px;
+
+    @include for-phone-up {
+      margin-bottom: 200px;
+    }
+  
+    animation: scrollIconMouse 4s linear 250ms infinite alternate;
+      
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &__scroll-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--main-text-color);
   }
 
 }
 
-
-.hero__scroll-link {
-  /* margin-left: auto;
-  margin-right: auto; */
-  margin-bottom: 200px;
-
-  animation: scrollIconMouse 4s linear 250ms infinite alternate;
-    
-  &:hover {
-    animation-play-state: paused;
-  }
-}
-
-.hero__scroll-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  fill: var(--main-text-color);
-}
 
 
 .hero-contacts {
   /* font-style: normal; */
-  font-style: 18px;
-  line-height: 1.667;
+  font-size: 18px;
+  line-height: 1.667;  text-align: center;
 }
 
 .hero-contacts-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+  @include for-phone-up {
+flex-direction: row;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    gap: 4rem;
+  }
+
+
+  @include for-tablet-up {
+    gap: 7rem;
+    font-size: 18px;
+
+  }
 }
 
 /* .hero-contacts-item + .hero-contacts-item {

@@ -7,13 +7,41 @@
 
 
   &__text {
-    width: 520px;
+    margin-bottom: 48px;
+
+    @include for-desktop-up {
+      margin-bottom: 0;
+      max-width: 29rem;
+      margin-right: 3rem;
+    }
+
   }
 
-}
 
 
-.cta-section-inner {
-  display: flex;
-  gap: 50px;
+  &__inner {
+    @include for-desktop-up {
+      display: flex;
+      gap: 50px;
+    }
+  }
+  
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 26px;
+  }
+  
+  &__form-field {
+    flex-basis: 100%;
+
+    @include for-tablet-up {
+      flex-basis: calc(50% - 13px);
+    }
+  }
+  
+  &__button {
+    align-self: flex-end;
+  }
 }
+

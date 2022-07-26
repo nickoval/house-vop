@@ -11,75 +11,68 @@
     margin-bottom: 24px;
   }
 
-  &__label {
-    display: block;
-    margin-bottom: 8px;
-    // font-size: 16px;
-    // line-height: 1.5;
-    color: var(--form-label-color);
-  }
+  // &__label {
+  //   display: block;
+  //   margin-bottom: 8px;
+  //   color: var(--form-label-color);
+  // }
 
-  &__label-asterisk {
-    color: var(--color-warning);
-  }
+  // &__label-asterisk {
+  //   color: var(--color-warning);
+  // }
 
-  &__input {
-    width: 100%;
-    height: 50px;
-    font-size: 14px;
-    line-height: 1.93;
-    color: var(--form-label-color);
-    background-color: var(--input-bg-color);
-    padding: 12px 16px;
-    border: 1px solit transparent;
+  // &__input {
+  //   width: 100%;
+  //   height: 50px;
+  //   font-size: 14px;
+  //   line-height: 1.93;
+  //   color: var(--form-label-color);
+  //   background-color: var(--input-bg-color);
+  //   padding: 12px 16px;
+  //   border: 1px solit transparent;
 
-    &:focus {
-      border-color: var(--acent-color);
-    }
+  //   &:focus {
+  //     border-color: var(--acent-color);
+  //   }
 
-    &:valid, &:in-range {
-      border-color: green;
-    }
+  //   &:valid, &:in-range {
+  //     border-color: green;
+  //   }
 
-    &:not(:placeholder-shown):invalid, 
-    &:not(:placeholder-shown):out-of-range {
-      border-color: var(--color-warning);
-    }
+  //   &:not(:placeholder-shown):invalid, 
+  //   &:not(:placeholder-shown):out-of-range {
+  //     border-color: var(--color-warning);
+  //   }
 
 
-    // &:required {
-    //   border: 1px dotted var(--color-warning);
-    // }
+  //   &::placeholder {
+  //     color: var(--input-plaseholder-color);
+  //   }
 
-    &::placeholder {
-      // font-family: var(main-font);
-      color: var(--input-plaseholder-color);
-    }
-
-  }
+  // }
 
 
-  &__error-message {
-    display: none;
-    font-size: 12px;
-    margin-top: 8px;
-    color: var(--color-warning);
-  }
+  // &__error-message {
+  //   display: none;
+  //   font-size: 12px;
+  //   margin-top: 8px;
+  //   color: var(--color-warning);
+  // }
 
-  &__input:not(:placeholder-shown):invalid + &__error-message, 
-  &__input:not(:placeholder-shown):out-of-range + &__error-message {
-    display: block;
-  }
+  // &__input:not(:placeholder-shown):invalid + &__error-message, 
+  // &__input:not(:placeholder-shown):out-of-range + &__error-message {
+  //   display: block;
+  // }
 
 
-  &__textarea {
-    height: 140px;
-    resize: none;
-  }
+  // &__textarea {
+  //   height: 140px;
+  //   resize: none;
+  // }
 
-  &__input-range {
-    width: 100%;
-  }
+  // &__input-range {
+  //   width: 100%;
+  // }
 
 // &__conditions-label, 
 &__comment {
@@ -90,16 +83,73 @@
 
 }
 
-// .conditions-label {
-//   font-size: 13px;
-//   line-height: 1.23;
-//   color: var(--form-label-color);
-// }
-
 .form-button {
   width: 100%;
 }
 
+
+.form-field {
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--form-label-color);
+  }
+  
+  &__asterisk {
+    color: var(--color-warning);
+  }
+  
+  &__input {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    line-height: 1.93;
+    color: var(--form-label-color);
+    background-color: var(--input-bg-color);
+    padding: 12px 16px;
+    border: 1px solit transparent;
+  
+    &:focus {
+      border-color: var(--acent-color);
+    }
+  
+    // &:valid,
+    // &:in-range {
+    //   border-color: green;
+    // }
+  
+    &:not(:placeholder-shown):invalid,
+    &:not(:placeholder-shown):out-of-range {
+      border-color: var(--color-warning);
+    }
+  
+    &::placeholder {
+      color: var(--input-plaseholder-color);
+    }
+  
+  }
+  
+  &__error-message {
+    display: none;
+    font-size: 12px;
+    margin-top: 8px;
+    color: var(--color-warning);
+  }
+  
+  &__input:not(:placeholder-shown):invalid+&__error-message,
+  &__input:not(:placeholder-shown):out-of-range+&__error-message {
+    display: block;
+  }
+
+        &__textarea {
+          height: 140px;
+          resize: none;
+        }
+    
+        &__input-range {
+          width: 100%;
+        }
+}
 
 // Checkbox (работает только при нажатии на label)
 // .checkbox {

@@ -19,7 +19,7 @@
     <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   </head>
   <body>
-    <header class="page-header">
+    <header class="header">
       <div class="container">
         <div class="header-inner">
           <a href="" class="logo">
@@ -28,7 +28,7 @@
             <use href="./img/first-screen__logo.svg"></use>
           </svg> -->
           </a>
-          <nav>
+          <nav class="header__desktop-menu">
             <ul class="header-menu">
               <li class="header-menu__item">
                 <a class="link" href="">Про комплекс</a>
@@ -61,6 +61,30 @@
               <li class="header-menu__item">
                 <a class="link" href="">Контакти</a>
               </li>
+            </ul>
+          </nav>
+          <button class="header__open-menu" data-mobile-menu-open>Open</button>
+          <nav
+            class="header__mobile-menu mobile-menu is-hidden"
+            data-mobile-menu
+          >
+            <button
+              class="header__close-menu"
+              type="button"
+              data-mobile-menu-close
+            >
+              Close
+            </button>
+            <ul class="mobile-menu__list">
+              <li>
+                <a href="#" class="mobile-menu__link link">Про комплекс</a>
+              </li>
+              <li><a href="#" class="mobile-menu__link link">Район</a></li>
+              <li>
+                <a href="#" class="mobile-menu__link link">Каталог квартир</a>
+              </li>
+              <li><a href="#" class="mobile-menu__link link">Іпотека</a></li>
+              <li><a href="#" class="mobile-menu__link link">Контакти</a></li>
             </ul>
           </nav>
         </div>
@@ -284,7 +308,7 @@
       <section class="section cta-section">
         <div class="container">
           <h2 class="title section__title">Хочете подивитися?</h2>
-          <div class="cta-section-inner">
+          <div class="cta-section__inner">
             <p class="cta-section__text">
               Житловий комплекс в історичному центрі міста HouseVOP завершив
               будівництво та здав об’єкт в експлаутацію
@@ -294,11 +318,69 @@
               тому що фанатазії придумати щось нове - вже немає. Якщо у когось є
               ідея - завжди велкам!
             </p>
-            <form action="" class="cta-section-form">
+            <!-- <form action="" class="cta-section-form">
               <input type="text" class="cta-section__input" />
               <input type="text" class="cta-section__input" />
               <input type="text" class="cta-section__input" />
               <button type="button" class="button" data-modal-open>
+                Подивитись район
+              </button>
+            </form> -->
+            <form class="cta-section__form">
+              <div class="form-field cta-section__form-field">
+                <label for="user-name" class="form-field__label"
+                  >Введіть ім’я
+                  <span class="form-field__asterisk">*</span></label
+                >
+                <input
+                  type="text"
+                  id="user-name"
+                  class="form-field__input"
+                  name="user-name"
+                  placeholder="Іван Іванович"
+                  pattern="^[Є-ЯҐа-їґ]+\s[Є-ЯҐа-їґ]+$"
+                  title="Поле повинно містити ім'я та призвище"
+                  maxlength="100"
+                  required
+                />
+                <p class="form-field__error-message">Не вірне значення</p>
+                <!-- pattern="^[А-Яа-яёЁЇїІіЄєҐґ]+\s[А-Яа-яёЁЇїІіЄєҐґ]+$" -->
+              </div>
+
+              <div class="form-field cta-section__form-field">
+                <label for="name" class="form-field__label"
+                  >Введіть e-mail
+                  <span class="form-field__asterisk">*</span></label
+                >
+                <input
+                  type="email"
+                  id="user-mail"
+                  class="form-field__input"
+                  name="user-email"
+                  placeholder="example@mail.com"
+                  required
+                />
+                <p class="form-field__error-message">Не вірне значення</p>
+              </div>
+
+              <div class="form-field cta-section__form-field">
+                <label for="user-phone" class="form-field__label"
+                  >Введіть телефон
+                </label>
+                <input
+                  type="tel"
+                  id="user-phone"
+                  class="form-field__input"
+                  name="user-phone"
+                  placeholder="099 122 22 21"
+                />
+              </div>
+
+              <button
+                class="cta-section__form-field cta-section__button button"
+                type="button"
+                data-modal-open
+              >
                 Подивитись район
               </button>
             </form>
@@ -495,15 +577,15 @@
           <form class="form" name="main-form" autocomplete="on">
             <fieldset>
               <legend class="form__title">Контактна інформація</legend>
-              <div class="form__field">
-                <label for="user-name" class="form__label"
+              <div class="form-field form__field">
+                <label for="user-name" class="form-field__label"
                   >Введіть ім’я
-                  <span class="form__label-asterisk">*</span></label
+                  <span class="form-field__asterisk">*</span></label
                 >
                 <input
                   type="text"
                   id="user-name"
-                  class="form__input"
+                  class="form-field__input"
                   name="user-name"
                   placeholder="Іван Іванович"
                   pattern="^[Є-ЯҐа-їґ]+\s[Є-ЯҐа-їґ]+$"
@@ -511,44 +593,45 @@
                   maxlength="100"
                   required
                 />
-                <p class="form__error-message">Не вірне значення</p>
+                <p class="form-field__error-message">Не вірне значення</p>
                 <!-- pattern="^[А-Яа-яёЁЇїІіЄєҐґ]+\s[А-Яа-яёЁЇїІіЄєҐґ]+$" -->
               </div>
-              <div class="form__field">
-                <label for="name" class="form__label"
+              <div class="form-field form__field">
+                <label for="name" class="form-field__label"
                   >Введіть e-mail
-                  <span class="form__label-asterisk">*</span></label
+                  <span class="form-field__asterisk">*</span></label
                 >
                 <input
                   type="email"
                   id="user-mail"
-                  class="form__input"
+                  class="form-field__input"
                   name="user-email"
                   placeholder="example@mail.com"
                   required
                 />
-                <p class="form__error-message">Не вірне значення</p>
+                <p class="form-field__error-message">Не вірне значення</p>
               </div>
+
               <div class="form__field">
-                <label for="user-phone" class="form__label"
+                <label for="user-phone" class="form-field__label"
                   >Введіть телефон
                 </label>
                 <input
                   type="tel"
                   id="user-phone"
-                  class="form__input"
+                  class="form-field__input"
                   name="user-phone"
                   placeholder="099 122 22 21"
                 />
               </div>
-              <div class="form__field">
-                <label for="user-password" class="form__label"
+              <div class="form-field form__field">
+                <label for="user-password" class="form-field__label"
                   >Введіть пароль
                 </label>
                 <input
                   type="password"
                   id="user-password"
-                  class="form__input"
+                  class="form-field__input"
                   name="user-password"
                   placeholder="****"
                   minlength="4"
@@ -562,25 +645,29 @@
               </p>
               <!-- <fieldset class="form__fieldset">
               <legend class="form__title">Інформація про квартиру</legend> -->
-              <div class="form__field">
-                <label for="flat-type" class="form__label"
+              <div class="form-field form__field">
+                <label for="flat-type" class="form-field__label"
                   >Оберіть тип квартири <span>*</span></label
                 >
-                <select id="flat-type" name="flat-type" class="form__input">
+                <select
+                  id="flat-type"
+                  name="flat-type"
+                  class="form-field__input"
+                >
                   <option value="1">Стандарт - 1 поверх</option>
                   <option value="2">Комфорт - 2 поверхи</option>
                   <option value="3" selected>Люкс - 3 поверхи</option>
                   <option value="4">Супер Люкс - 4 поверхи</option>
                 </select>
               </div>
-              <div class="form__field">
-                <label for="flat-location" class="form__label"
+              <div class="form-field form__field">
+                <label for="flat-location" class="form-field__label"
                   >Наскільки вам зручне містознаходження?</label
                 >
                 <input
                   type="range"
                   id="flat-location"
-                  class="form__input-range"
+                  class="form-field__input-range"
                   name="flat-location"
                   min="1"
                   max="10"
@@ -588,30 +675,30 @@
                   step="3"
                 />
               </div>
-              <div class="form__field">
-                <label for="user-term" class="form__label"
+              <div class="form-field form__field">
+                <label for="user-term" class="form-field__label"
                   >На який термін плануєте купувати житло? (від 1 до 100
                   років)</label
                 >
                 <input
                   type="number"
                   id="user-term"
-                  class="form__input"
+                  class="form-field__input"
                   name="user-term"
                   value="10"
                   min="1"
                   max="50"
                 />
-                <p class="form__error-message">Не вірне значення</p>
+                <p class="form-field__error-message">Не вірне значення</p>
               </div>
-              <div class="form__field">
-                <label for="date-time" class="form__label"
+              <div class="form-field form__field">
+                <label for="date-time" class="form-field__label"
                   >Оберіть дату і час перегляду квартири <span>*</span></label
                 >
                 <input
                   type="datetime-local"
                   id="dite-time"
-                  class="form__input"
+                  class="form-field__input"
                   name="dite-time"
                   placeholder="02/11/2022  10:00"
                 />
@@ -621,14 +708,14 @@
 
             <fieldset>
               <legend class="form__title">Додаткова інформація</legend>
-              <div class="form__field">
-                <label for="user-comment" class="form__label"
+              <div class="form-field form__field">
+                <label for="user-comment" class="form-field__label"
                   >Введіть коментар
                 </label>
                 <textarea
                   name=""
                   id="user-comment"
-                  class="form__input form__textarea"
+                  class="form-field__input form-field__textarea"
                   placeholder="Моє побажання..."
                 ></textarea>
               </div>
@@ -677,5 +764,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

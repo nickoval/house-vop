@@ -1,11 +1,20 @@
 .price-table {
   width: 100%;
-
-  font-size: 24px;
+  
+  font-size: 16px;
   line-height: 1.167;
   text-align: left;
 
+  @media screen and (min-width: 540px) {
+      font-size: 24px;
+  }
+  
   border-collapse: collapse;
+
+  // overflow-x: auto;
+  // display: block;
+
+
 
   &__caption {
     text-align: left;
