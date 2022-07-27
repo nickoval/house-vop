@@ -307,9 +307,22 @@ main {
 
 .hero-contacts {
   /* font-style: normal; */
-  font-size: 18px;
-  line-height: 1.667;
-  text-align: center;
+}
+.hero-contacts__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media (min-width: 768px) {
+  .hero-contacts__link {
+    font-size: 18px;
+    line-height: 1.667;
+  }
+}
+.hero-contacts__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
 }
 
 .hero-contacts-list {
@@ -322,31 +335,18 @@ main {
 @media (min-width: 480px) {
   .hero-contacts-list {
     flex-direction: row;
-    gap: 4rem;
+    gap: 3rem;
   }
 }
 @media (min-width: 768px) {
   .hero-contacts-list {
     gap: 7rem;
-    font-size: 18px;
   }
 }
 
 /* .hero-contacts-item + .hero-contacts-item {
   margin-left: 134px;
 } */
-.hero-contacts__link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.hero-contacts__icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: currentColor;
-}
-
 .benefits-list {
   display: flex;
   justify-content: center;
@@ -526,7 +526,25 @@ main {
 
 .callback-inner {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+@media (min-width: 768px) {
+  .callback-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 768px) {
+  .callback-inner__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 1200px) {
+  .callback-inner__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .callback-section__text {
@@ -534,7 +552,6 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 255px;
   height: 50px;
   font-size: 13px;
   line-height: 1.23;
@@ -550,13 +567,26 @@ main {
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .footer-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .footer-info {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .footer-info {
+    gap: 4rem;
+  }
 }
 
 .copyright-text {

@@ -1,17 +1,44 @@
 .callback-inner {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  gap: 30px;
+flex-direction: column;
+  flex-basis: 100%;
+
+
+  @include for-tablet-up {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+  &__item {
+
+    @include for-tablet-up {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @include for-desktop-up {
+      flex-basis: calc((100% - 3 * 30px) / 4);
+    }
+  }
 }
 
 
 
-.callback-section__text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 255px;
-  height: 50px;
-  font-size: 13px;
-  line-height: 1.23;
+.callback-section {
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    // width: 255px;
+    height: 50px;
+    font-size: 13px;
+    line-height: 1.23;
+  }
+
+  // &__form-field {
+  //   width: 255px;
+  // }
 }
+

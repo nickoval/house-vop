@@ -54,8 +54,28 @@
 
 .hero-contacts {
   /* font-style: normal; */
-  font-size: 18px;
-  line-height: 1.667;  text-align: center;
+  // font-size: 18px;
+  // line-height: 1.667;  
+  // text-align: center;
+  
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    // font-size: 18px;
+    // line-height: 1.667;
+
+    @include for-tablet-up {
+      font-size: 18px;
+      line-height: 1.667;
+    }
+  }
+  
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+  }
 }
 
 .hero-contacts-list {
@@ -70,13 +90,12 @@ flex-direction: row;
     // display: flex;
     // justify-content: center;
     // align-items: center;
-    gap: 4rem;
+    gap: 3rem;
   }
 
 
   @include for-tablet-up {
     gap: 7rem;
-    font-size: 18px;
 
   }
 }
@@ -84,14 +103,3 @@ flex-direction: row;
 /* .hero-contacts-item + .hero-contacts-item {
   margin-left: 134px;
 } */
-.hero-contacts__link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.hero-contacts__icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: currentColor;
-}

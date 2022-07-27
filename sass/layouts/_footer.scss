@@ -5,20 +5,37 @@
   &__link {
     padding: 0;
   }
+
+  // &__wrap {
+  //   display: flex;
+  //     justify-content: space-between;
+  // }
+
 }
 
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  gap: 2rem;
+
+  @include for-tablet-up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 
 .footer-info {
   display: flex;
   flex-direction: column;
+  gap: 2rem; 
   // justify-content: space-between;
-  gap: 4rem;
+  @include for-tablet-up {
+    gap: 4rem;  
+  }
+
 }
 
 

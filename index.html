@@ -423,11 +423,40 @@
         <div class="container">
           <h2 class="title section__title">Залишились питання?</h2>
           <div class="callback-inner">
-            <p class="callback-section__text">
+            <p class="callback-section__text callback-inner__item">
               *Ми нікому не передаємо ваші дані <br />
               і не зберігаємо ваш номер у базу.
             </p>
-            <button type="button" class="button" data-modal-open disabled>
+            <div class="form-field callback-section__form-field callback-inner__item">
+              <!-- <label for="user-name" class="form-field__label"
+                >Введіть ім’я
+                </label
+              > -->
+              <input
+                type="text"
+                id="user-name"
+                class="form-field__input"
+                name="user-name"
+                placeholder="Ваше ім'я"
+                title="Поле повинно містити ім'я"
+                maxlength="100"
+                required
+              />
+            </div>
+
+            <div class="form-field callback-section__form-field callback-inner__item">
+              <!-- <label for="user-phone" class="form-field__label"
+                >Введіть телефон
+              </label> -->
+              <input
+                type="tel"
+                id="user-phone"
+                class="form-field__input"
+                name="user-phone"
+                placeholder="Ваш телефон"
+              />
+            </div>
+            <button type="button" class="button callback-section__button callback-inner__item" data-modal-open disabled>
               Подивитись район
             </button>
           </div>
@@ -449,120 +478,98 @@
             </a>
             <p class="copyright-text">© 2022 Всі права захищені. HouseVOP</p>
           </div>
-          <nav>
-            <ul class="footer-menu">
-              <li class="footer-menu__item">
-                <a class="link footer__link" href="#">Про комплекс</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="link footer__link" href="#">Район</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="link footer__link" href="#">Каталог квартир</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="link footer__link" href="#">Іпотека</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="link footer__link" href="#">Контакти</a>
-              </li>
-            </ul>
-          </nav>
-          <address class="footer-contacts">
-            <ul class="footer-adress-list">
-              <li class="footer-adress-list__item">
-                Адреса:
-                <a class="footer-adress-link" class="link" href="#"
-                  >вул. Садова 10-15</a
-                >
-              </li>
-              <li class="footer-adress-list__item">
-                Телефон:
-                <a
-                  class="footer-adress-link"
-                  class="link"
-                  href="tel:+380991234567"
-                  >+38 (099) 123-45-67</a
-                >
-              </li>
-              <li class="footer-adress-list__item">
-                Відділ продажу: <time datetime="10:00">10:00</time> -
-                <time datetime="20:00">20:00</time>
-              </li>
-              <li class="footer-adress-list__item">
-                E-mail:
-                <a
-                  class="footer-adress-link"
-                  class="link"
-                  href="mailto:vip@housevip.ru"
-                  >vip@housevip.ru</a
-                >
-              </li>
-            </ul>
-            <ul class="social-list">
-              <li>
-                <a class="social-list__link" href="">
-                  <svg
-                    class="social-list__icon"
-                    aria-label="Перейти до youtube"
+          <!-- <div class="footer__wrap"> -->
+            <nav>
+              <ul class="footer-menu">
+                <li class="footer-menu__item">
+                  <a class="link footer__link" href="#">Про комплекс</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a class="link footer__link" href="#">Район</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a class="link footer__link" href="#">Каталог квартир</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a class="link footer__link" href="#">Іпотека</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a class="link footer__link" href="#">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+            <address class="footer-contacts">
+              <ul class="footer-adress-list">
+                <li class="footer-adress-list__item">
+                  Адреса:
+                  <a class="footer-adress-link" class="link" href="#"
+                    >вул. Садова 10-15</a
                   >
-                    <use href="./img/icons.svg#icon-youtube"></use>
-                  </svg>
-                  <!-- <img
-                    class="social-img"
-                    src="./img/icons/youtunbe.svg"
-                    alt="youtunbe"
-                    width="28"
-                /> -->
-                </a>
-              </li>
-              <li>
-                <a class="social-list__link" href="">
-                  <svg class="social-list__icon" aria-label="Перейти до vk">
-                    <use href="./img/icons.svg#icon-vk"></use>
-                  </svg>
-                  <!-- <img
-                    class="social-img"
-                    src="./img/icons/vk.svg"
-                    alt="facebook"
-                    width="35"
-                /> -->
-                </a>
-              </li>
-              <li>
-                <a class="social-list__link" href="">
-                  <svg
-                    class="social-list__icon"
-                    aria-label="Перейти до facebook"
+                </li>
+                <li class="footer-adress-list__item">
+                  Телефон:
+                  <a
+                    class="footer-adress-link"
+                    class="link"
+                    href="tel:+380991234567"
+                    >+38 (099) 123-45-67</a
                   >
-                    <use href="./img/icons.svg#icon-facebook"></use>
-                  </svg>
-                  <!-- <img
-                    class="social-img"
-                    src="./img/icons/.svg"
-                    alt="facebook"
-                    width="20"
-                /> -->
-                </a>
-              </li>
-              <li>
-                <a class="social-list__link" href="">
-                  <svg
-                    class="social-list__icon"
-                    aria-label="Перейти до instagram"
+                </li>
+                <li class="footer-adress-list__item">
+                  Відділ продажу: <time datetime="10:00">10:00</time> -
+                  <time datetime="20:00">20:00</time>
+                </li>
+                <li class="footer-adress-list__item">
+                  E-mail:
+                  <a
+                    class="footer-adress-link"
+                    class="link"
+                    href="mailto:vip@housevip.ru"
+                    >vip@housevip.ru</a
                   >
-                    <use href="./img/icons.svg#icon-instagram"></use>
-                  </svg>
-                  <!-- <img
-                    class="social-img"
-                    src="./img/icons/.svg"
-                    alt="instagram"
-                    width="20"
-                /> -->
-                </a>
-              </li>
-            </ul>
-          </address>
+                </li>
+              </ul>
+              <ul class="social-list">
+                <li>
+                  <a class="social-list__link" href="">
+                    <svg
+                      class="social-list__icon"
+                      aria-label="Перейти до youtube"
+                    >
+                      <use href="./img/icons.svg#icon-youtube"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-list__link" href="">
+                    <svg class="social-list__icon" aria-label="Перейти до vk">
+                      <use href="./img/icons.svg#icon-vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-list__link" href="">
+                    <svg
+                      class="social-list__icon"
+                      aria-label="Перейти до facebook"
+                    >
+                      <use href="./img/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-list__link" href="">
+                    <svg
+                      class="social-list__icon"
+                      aria-label="Перейти до instagram"
+                    >
+                      <use href="./img/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </address>
+          <!-- </div> -->
         </div>
       </div>
     </footer>
