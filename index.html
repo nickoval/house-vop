@@ -63,7 +63,9 @@
               </li>
             </ul>
           </nav>
-          <button class="header__open-menu" data-mobile-menu-open>Open</button>
+          <button class="header__open-menu" data-mobile-menu-open>
+            <span class="header__open-icon"></span>
+          </button>
           <nav
             class="header__mobile-menu mobile-menu is-hidden"
             data-mobile-menu
@@ -73,7 +75,7 @@
               type="button"
               data-mobile-menu-close
             >
-              Close
+              <span class="header__close-icon"></span>
             </button>
             <ul class="mobile-menu__list">
               <li>
@@ -168,7 +170,22 @@
           <ul class="flat-list">
             <li class="flat-list__item-wrap">
               <div class="flat-item">
-                <img src="./img/standart.jpg" alt="Стандарт" />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/standart@1x.webp 1x,
+                      ./img/standart@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source srcset="./img/standart@2x.jpg 2x" type="image/jpg" />
+                  <img src="./img/standart.jpg" alt="Стандарт" />
+                </picture>
+                <!-- <img
+                  srcset="./img/standart.jpg@2x"
+                  src="./img/standart.jpg"
+                  alt="Стандарт"
+                /> -->
                 <p class="flat-item__text">Стандарт - 1 поверх</p>
                 <div class="flat-item__overlay">
                   <p class="flat-item__overlay-text">
@@ -183,7 +200,14 @@
             </li>
             <li class="flat-list__item-wrap">
               <div class="flat-item">
-                <img src="./img/standart.jpg" alt="Комфорт" />
+                <picture>
+                  <source
+                    srcset="./img/comfort@1x.webp 1x, ./img/comfort@2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <source srcset="./img/comfort@2x.jpg 2x" type="image/jpg" />
+                  <img src="./img/comfort.jpg" alt="Комфорт" />
+                </picture>
                 <p class="flat-item__text">Комфорт - 2 поверх</p>
                 <div class="flat-item__overlay">
                   <p class="flat-item__overlay-text">
@@ -198,7 +222,14 @@
             </li>
             <li class="flat-list__item-wrap">
               <div class="flat-item">
-                <img src="./img/standart.jpg" alt="Люкс" />
+                <picture>
+                  <source
+                    srcset="./img/lux@1x.webp 1x, ./img/lux@2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <source srcset="./img/lux@2x.jpg 2x" type="image/jpg" />
+                  <img src="./img/lux.jpg" alt="Люкс" />
+                </picture>
                 <p class="flat-item__text">Люкс - 3 поверх</p>
                 <div class="flat-item__overlay">
                   <p class="flat-item__overlay-text">
@@ -213,7 +244,14 @@
             </li>
             <li class="flat-list__item-wrap">
               <div class="flat-item">
-                <img src="./img/standart.jpg" alt="Супер Люкс" />
+                <picture>
+                  <source
+                    srcset="./img/luxury@1x.webp 1x, ./img/luxury@2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <source srcset="./img/luxury@2x.jpg 2x" type="image/jpg" />
+                  <img src="./img/luxury.jpg" alt="Супкр Люкс" />
+                </picture>
                 <p class="flat-item__text">Супер Люкс - 4 поверх</p>
                 <div class="flat-item__overlay">
                   <p class="flat-item__overlay-text">
@@ -427,7 +465,9 @@
               *Ми нікому не передаємо ваші дані <br />
               і не зберігаємо ваш номер у базу.
             </p>
-            <div class="form-field callback-section__form-field callback-inner__item">
+            <div
+              class="form-field callback-section__form-field callback-inner__item"
+            >
               <!-- <label for="user-name" class="form-field__label"
                 >Введіть ім’я
                 </label
@@ -444,7 +484,9 @@
               />
             </div>
 
-            <div class="form-field callback-section__form-field callback-inner__item">
+            <div
+              class="form-field callback-section__form-field callback-inner__item"
+            >
               <!-- <label for="user-phone" class="form-field__label"
                 >Введіть телефон
               </label> -->
@@ -456,7 +498,12 @@
                 placeholder="Ваш телефон"
               />
             </div>
-            <button type="button" class="button callback-section__button callback-inner__item" data-modal-open disabled>
+            <button
+              type="button"
+              class="button callback-section__button callback-inner__item"
+              data-modal-open
+              disabled
+            >
               Подивитись район
             </button>
           </div>
@@ -479,96 +526,96 @@
             <p class="copyright-text">© 2022 Всі права захищені. HouseVOP</p>
           </div>
           <!-- <div class="footer__wrap"> -->
-            <nav>
-              <ul class="footer-menu">
-                <li class="footer-menu__item">
-                  <a class="link footer__link" href="#">Про комплекс</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a class="link footer__link" href="#">Район</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a class="link footer__link" href="#">Каталог квартир</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a class="link footer__link" href="#">Іпотека</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a class="link footer__link" href="#">Контакти</a>
-                </li>
-              </ul>
-            </nav>
-            <address class="footer-contacts">
-              <ul class="footer-adress-list">
-                <li class="footer-adress-list__item">
-                  Адреса:
-                  <a class="footer-adress-link" class="link" href="#"
-                    >вул. Садова 10-15</a
+          <nav>
+            <ul class="footer-menu">
+              <li class="footer-menu__item">
+                <a class="link footer__link" href="#">Про комплекс</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="link footer__link" href="#">Район</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="link footer__link" href="#">Каталог квартир</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="link footer__link" href="#">Іпотека</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="link footer__link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="footer-contacts">
+            <ul class="footer-adress-list">
+              <li class="footer-adress-list__item">
+                Адреса:
+                <a class="footer-adress-link" class="link" href="#"
+                  >вул. Садова 10-15</a
+                >
+              </li>
+              <li class="footer-adress-list__item">
+                Телефон:
+                <a
+                  class="footer-adress-link"
+                  class="link"
+                  href="tel:+380991234567"
+                  >+38 (099) 123-45-67</a
+                >
+              </li>
+              <li class="footer-adress-list__item">
+                Відділ продажу: <time datetime="10:00">10:00</time> -
+                <time datetime="20:00">20:00</time>
+              </li>
+              <li class="footer-adress-list__item">
+                E-mail:
+                <a
+                  class="footer-adress-link"
+                  class="link"
+                  href="mailto:vip@housevip.ru"
+                  >vip@housevip.ru</a
+                >
+              </li>
+            </ul>
+            <ul class="social-list">
+              <li>
+                <a class="social-list__link" href="">
+                  <svg
+                    class="social-list__icon"
+                    aria-label="Перейти до youtube"
                   >
-                </li>
-                <li class="footer-adress-list__item">
-                  Телефон:
-                  <a
-                    class="footer-adress-link"
-                    class="link"
-                    href="tel:+380991234567"
-                    >+38 (099) 123-45-67</a
+                    <use href="./img/icons.svg#icon-youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-list__link" href="">
+                  <svg class="social-list__icon" aria-label="Перейти до vk">
+                    <use href="./img/icons.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-list__link" href="">
+                  <svg
+                    class="social-list__icon"
+                    aria-label="Перейти до facebook"
                   >
-                </li>
-                <li class="footer-adress-list__item">
-                  Відділ продажу: <time datetime="10:00">10:00</time> -
-                  <time datetime="20:00">20:00</time>
-                </li>
-                <li class="footer-adress-list__item">
-                  E-mail:
-                  <a
-                    class="footer-adress-link"
-                    class="link"
-                    href="mailto:vip@housevip.ru"
-                    >vip@housevip.ru</a
+                    <use href="./img/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-list__link" href="">
+                  <svg
+                    class="social-list__icon"
+                    aria-label="Перейти до instagram"
                   >
-                </li>
-              </ul>
-              <ul class="social-list">
-                <li>
-                  <a class="social-list__link" href="">
-                    <svg
-                      class="social-list__icon"
-                      aria-label="Перейти до youtube"
-                    >
-                      <use href="./img/icons.svg#icon-youtube"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a class="social-list__link" href="">
-                    <svg class="social-list__icon" aria-label="Перейти до vk">
-                      <use href="./img/icons.svg#icon-vk"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a class="social-list__link" href="">
-                    <svg
-                      class="social-list__icon"
-                      aria-label="Перейти до facebook"
-                    >
-                      <use href="./img/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a class="social-list__link" href="">
-                    <svg
-                      class="social-list__icon"
-                      aria-label="Перейти до instagram"
-                    >
-                      <use href="./img/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </address>
+                    <use href="./img/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
           <!-- </div> -->
         </div>
       </div>

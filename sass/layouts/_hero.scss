@@ -1,3 +1,5 @@
+$hero-image-gradient:linear-gradient(180deg, #242B33 6.56%, rgba(36, 43, 51, 0.3) 50.31%, #242B33 89.37%);
+
 .hero {
   /* width: 556px;
   height: 470px; */
@@ -7,11 +9,14 @@
 
 
   background-color: var(--background-color-primary);
-  background-image: linear-gradient(180deg, #242B33 6.56%, rgba(36, 43, 51, 0.3) 50.31%, #242B33 89.37%), url(../img/hero-image.jpg);
+  background-image: $hero-image-gradient, url(../img/hero-image.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* background-attachment: fixed; */
+
+  @media (min-device-pixel-ratio:2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {background-image: $hero-image-gradient, url(../img/hero-image@2x.jpg);}
 
   
   &__title {

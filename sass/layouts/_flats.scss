@@ -135,7 +135,25 @@
   &:focus &__overlay {
     transform: translateY(0);
   }
-        
+  
+  &__overlay-text {
+    font-size: 12px;
+
+
+    // @include for-tablet-up {
+    //   font-size: 14px;
+    // }
+
+    @include for-desktop-up {
+      font-size: 16px;
+    }
+
+
+  }
+
+
+
+
 }
       // &__text {
       //   font-size: 16px;
